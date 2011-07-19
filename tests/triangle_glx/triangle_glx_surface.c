@@ -44,7 +44,7 @@ void event_loop(Display *dpy) {
 
 	draw(dpy, mainwin);
 	/* This should destroy the surface. */
-	glXMakeCurrent(dpy, None, ctx);
+	glXMakeCurrent(dpy, None, NULL);
 	/* This should recreate the surface. */
 	glXMakeCurrent(dpy, mainwin, ctx);
     }

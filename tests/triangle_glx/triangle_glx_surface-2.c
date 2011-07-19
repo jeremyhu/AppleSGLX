@@ -48,7 +48,7 @@ void event_loop(Display *dpy) {
 
 	draw(dpy, mainwin);
 	/* This should destroy the surface. */
-	if(!glXMakeCurrent(dpy, None, ctx)) {
+	if(!glXMakeCurrent(dpy, None, NULL)) {
 	    fprintf(stderr, "%s: make current None failed!\n", __func__);
 	    exit(EXIT_FAILURE);
 	}	
